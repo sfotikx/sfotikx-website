@@ -27,7 +27,7 @@
     /* Header */
     .site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(223,231,239,.9)}
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand img{display:block;width:172px;height:auto}
+    .brand img{display:block;width:184px;height:auto}
     .nav-links{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:600;color:#52647a}
     .nav-links a{text-decoration:none}
     .nav-links a:hover{color:var(--navy)}
@@ -35,7 +35,7 @@
 
     /* Hero */
     .hero{background:linear-gradient(135deg,#071d36 0%,#0d3153 54%,#164d7c 100%);color:white;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;min-height:670px;align-items:center;gap:54px;padding:74px 0}
+    .hero-grid{display:grid;grid-template-columns:.90fr 1.10fr;min-height:720px;align-items:center;gap:58px;padding:82px 0}
     .eyebrow{font-size:13px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:#a8d3f8;margin-bottom:18px}
     h1{font-size:clamp(48px,6.6vw,78px);line-height:1.02;letter-spacing:-.045em;max-width:700px;margin-bottom:27px}
     .hero-copy{font-size:18px;line-height:1.75;color:#dbe8f4;max-width:680px}
@@ -44,7 +44,17 @@
     .btn-primary{background:white;color:var(--navy)}
     .btn-secondary{border:1px solid rgba(255,255,255,.34);color:white;background:rgba(255,255,255,.04)}
     .hero-visual{position:relative}
-    .hero-photo{width:100%;height:560px;object-fit:cover;object-position:center;border-radius:24px;box-shadow:0 28px 70px rgba(0,0,0,.23);border:1px solid rgba(255,255,255,.20)}
+    .hero-photo{width:100%;height:620px;object-fit:cover;object-position:center;border-radius:24px;box-shadow:0 28px 70px rgba(0,0,0,.23);border:1px solid rgba(255,255,255,.20)}
+
+    .hero-points{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .hero-point{font-size:12px;font-weight:750;letter-spacing:.05em;text-transform:uppercase;color:#cfe4f6;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);padding:8px 11px;border-radius:999px}
+
+    .focus-strip{background:#fff;border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+    .focus-row{display:grid;grid-template-columns:repeat(3,1fr)}
+    .focus-item{padding:24px 28px;border-right:1px solid var(--line)}
+    .focus-item:last-child{border-right:0}
+    .focus-item strong{display:block;color:var(--navy);font-size:15px;margin-bottom:3px}
+    .focus-item span{display:block;color:var(--muted);font-size:13px}
     
 
     /* Sections */
@@ -56,7 +66,7 @@
 
     .about{background:var(--white)}
     .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
-    .about-image{height:500px;width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+    .about-image{height:540px;width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
     .prose{font-size:17px;color:#516277}
     .prose p+p{margin-top:20px}
 
@@ -70,7 +80,7 @@
 
     .collab{background:white}
     .collab-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:60px;align-items:center}
-    .collab-image{width:100%;height:450px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+    .collab-image{width:100%;height:500px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
     .collab-box{background:linear-gradient(135deg,#f1f7fc,#fff);border:1px solid var(--line);padding:36px;border-radius:22px}
     .collab-box p{font-size:17px;color:#56677b}
     .collab-box p+p{margin-top:18px}
@@ -83,13 +93,25 @@
     .contact-card .label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#a9d0f1;font-weight:800}
     .contact-card a{display:inline-block;margin-top:7px;font-size:22px;font-weight:750;text-decoration:none;word-break:break-word}
 
+    .email-row{display:flex;align-items:center;gap:14px;margin-top:8px}
+    .gmail-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:8px;background:#fff}
+    .gmail-icon svg{width:23px;height:23px;display:block}
+    .email-row a{margin-top:0!important}
+
     footer{background:#061729;color:#aab9c8;padding:30px 0 34px}
     .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
     .footer-brand img{width:154px;filter:none;background:white;border-radius:8px;padding:5px}
     .company-info{text-align:right;font-size:13px;line-height:1.7}
     .copyright{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.10);font-size:12px;color:#8192a3}
 
+    .footer-email{margin-top:9px}
+    .footer-email a{color:#dce7f0;text-decoration:none}
+
     @media (max-width:900px){
+      .focus-row{grid-template-columns:1fr}
+      .focus-item{border-right:0;border-bottom:1px solid var(--line)}
+      .focus-item:last-child{border-bottom:0}
+
       .nav-links{gap:18px}
       .hero-grid,.about-grid,.collab-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
       .hero-grid{padding:68px 0}
@@ -99,7 +121,7 @@
     }
     @media (max-width:640px){
       .nav{height:70px}
-      .brand img{width:138px}
+      .brand img{width:150px}
       .nav-links a:not(.nav-cta){display:none}
       .nav-cta{padding:9px 14px}
       section{padding:76px 0}
@@ -108,7 +130,7 @@
       .hero-copy{font-size:16px}
       .hero-photo{height:300px;border-radius:18px}
       .cards{grid-template-columns:1fr}
-      .about-image,.collab-image{height:360px}
+      .about-image,.collab-image{height:380px}
       .collab-box,.card{padding:24px}
       .footer-top{flex-direction:column}
     }
@@ -138,10 +160,23 @@
             <a class="btn btn-primary" href="#capabilities">Explore capabilities</a>
             <a class="btn btn-secondary" href="#contact">Start a conversation</a>
           </div>
+          <div class="hero-points" aria-label="SFOTIKX focus areas">
+            <span class="hero-point">Research-led</span>
+            <span class="hero-point">Collaborative</span>
+            <span class="hero-point">Development-focused</span>
+          </div>
         </div>
         <div class="hero-visual">
           <img class="hero-photo" src="https://images.unsplash.com/photo-1766297246931-7b861269dab0?auto=format&fit=crop&fm=jpg&q=82&w=2000" alt="Scientist working with a microscope in a laboratory">
         </div>
+      </div>
+    </section>
+
+    <section class="focus-strip" aria-label="SFOTIKX approach">
+      <div class="container focus-row">
+        <div class="focus-item"><strong>Scientific expertise</strong><span>Research and technical development across the life sciences.</span></div>
+        <div class="focus-item"><strong>Flexible collaboration</strong><span>Support for focused technical projects and broader R&amp;D programmes.</span></div>
+        <div class="focus-item"><strong>Practical development</strong><span>Working from scientific questions towards useful development outcomes.</span></div>
       </div>
     </section>
 
@@ -198,7 +233,17 @@
         </div>
         <div class="contact-card">
           <div class="label">Email</div>
-          <a href="mailto:sfotikx@gmail.com">sfotikx@gmail.com</a>
+          <div class="email-row">
+            <span class="gmail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Gmail">
+                <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13A2.5 2.5 0 0 1 18.5 21H5.5A2.5 2.5 0 0 1 3 18.5v-13Z" fill="#fff"/>
+                <path d="M5 7.2 12 12l7-4.8V18a1 1 0 0 1-1 1h-1V9.9l-5 3.5a1.7 1.7 0 0 1-2 0L5 9.9V19H4a1 1 0 0 1-1-1V7.2l2 1.4 7 4.8 7-4.8 2-1.4A2 2 0 0 0 19 5H5a2 2 0 0 0-2 2.2Z" fill="#d93025"/>
+                <path d="M4 19h2V9.2L5 8.5 3 7.1V18a1 1 0 0 0 1 1Zm16-11.9-2 1.4-1 .7V19h2a1 1 0 0 0 1-1V7.1Z" fill="#4285f4" opacity=".95"/>
+                <path d="M5 7.2 12 12l7-4.8v2.1l-6 4.1a1.7 1.7 0 0 1-2 0L5 9.3Z" fill="#f4b400" opacity=".95"/>
+              </svg>
+            </span>
+            <a href="mailto:sfotikx@gmail.com">sfotikx@gmail.com</a>
+          </div>
         </div>
       </div>
     </section>
@@ -213,6 +258,7 @@
           Registered in England and Wales<br>
           Company No. 17489122<br>
           Registered Office: 66 Paul Street, London, England, EC2A 4NA
+          <div class="footer-email">Email: <a href="mailto:sfotikx@gmail.com">sfotikx@gmail.com</a></div>
         </div>
       </div>
       <div class="copyright">© 2026 SFOTIKX Ltd. All rights reserved.</div>
