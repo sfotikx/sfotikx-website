@@ -1,302 +1,304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SFOTIKX | Pharmaceutical & Scientific R&D</title>
-
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #18232f;
-    background: #ffffff;
-    line-height: 1.6;
-}
-
-header {
-    padding: 24px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e8edf2;
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(8px);
-    z-index: 10;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-nav a {
-    margin-left: 28px;
-    text-decoration: none;
-    color: #425466;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #1769aa;
-}
-
-.hero {
-    padding: 110px 7% 100px;
-    max-width: 1150px;
-}
-
-.eyebrow {
-    color: #1769aa;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-h1 {
-    font-size: clamp(48px, 7vw, 82px);
-    line-height: 1.03;
-    max-width: 900px;
-    letter-spacing: -2px;
-    margin-bottom: 28px;
-}
-
-.hero p {
-    font-size: 20px;
-    color: #5b6875;
-    max-width: 760px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 34px;
-    padding: 13px 24px;
-    background: #1769aa;
-    color: white;
-    text-decoration: none;
-    border-radius: 7px;
-    font-weight: 600;
-}
-
-section {
-    padding: 90px 7%;
-}
-
-.section-light {
-    background: #f6f9fc;
-}
-
-h2 {
-    font-size: 38px;
-    margin-bottom: 18px;
-    letter-spacing: -1px;
-}
-
-.intro {
-    max-width: 780px;
-    color: #5b6875;
-    font-size: 18px;
-    margin-bottom: 45px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 1100px;
-}
-
-.card {
-    padding: 32px;
-    border: 1px solid #e2e8ee;
-    border-radius: 12px;
-    background: #ffffff;
-}
-
-.card h3 {
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #64717e;
-}
-
-.contact {
-    max-width: 850px;
-}
-
-.contact a {
-    color: #1769aa;
-    text-decoration: none;
-}
-
-footer {
-    padding: 30px 7%;
-    border-top: 1px solid #e8edf2;
-    color: #7a8793;
-    font-size: 14px;
-}
-
-@media (max-width: 700px) {
-    header {
-        padding: 20px 5%;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SFOTIKX Ltd — collaborative pharmaceutical and scientific R&D." />
+  <meta name="theme-color" content="#0b2239" />
+  <title>SFOTIKX | Pharmaceutical & Scientific R&D</title>
+  <style>
+    :root{
+      --navy:#0b2239;
+      --navy-2:#123556;
+      --blue:#2f78c4;
+      --cyan:#5ea7dc;
+      --ink:#15202b;
+      --muted:#5f6f7d;
+      --line:#dfe7ee;
+      --soft:#f4f8fb;
+      --white:#fff;
+      --shadow:0 18px 50px rgba(11,34,57,.09);
+      --radius:18px;
+      --max:1180px;
     }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),92%);margin:auto}
 
-    nav {
-        display: none;
-    }
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,231,238,.85)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em;color:var(--navy)}
+    .brand-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#eef5fb,#d7e6f2);overflow:hidden}
+    .brand-mark img{width:125px;max-width:none;height:auto;transform:translateX(0)}
+    nav{display:flex;gap:26px;align-items:center;font-size:.94rem;color:#465766}
+    nav a:hover{color:var(--blue)}
+    .nav-cta{padding:10px 16px;border-radius:999px;border:1px solid #cbd8e3;background:#fff;color:var(--navy);font-weight:650}
 
-    .hero,
-    section {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#07192a 0%,#0b2239 58%,#123f65 100%);color:#fff}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;min-height:690px;padding:92px 0 82px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800;color:#9cc8eb;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,74px);line-height:1.03;letter-spacing:-.045em;max-width:780px;margin-bottom:24px}
+    .hero-copy{font-size:1.14rem;max-width:690px;color:#d6e4ef}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:10px;font-weight:700;transition:.2s ease}
+    .btn-primary{background:#fff;color:var(--navy)}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+    .btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.04)}
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    .hero-visual{position:relative;min-height:430px;display:grid;place-items:center}
+    .visual-card{width:min(500px,100%);aspect-ratio:1/1;border:1px solid rgba(255,255,255,.16);border-radius:28px;background:radial-gradient(circle at 20% 20%,rgba(94,167,220,.22),transparent 38%),linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.015));box-shadow:0 30px 90px rgba(0,0,0,.25);padding:26px;position:relative;overflow:hidden}
+    .visual-label{position:absolute;left:26px;top:24px;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#b9d8ee;font-weight:700}
+    .molecule{width:100%;height:100%}
 
-    h1 {
-        font-size: 48px;
+    section{padding:88px 0}
+    .section-head{max-width:760px;margin-bottom:40px}
+    .kicker{text-transform:uppercase;letter-spacing:.15em;color:var(--blue);font-size:.75rem;font-weight:800;margin-bottom:10px}
+    h2{font-size:clamp(31px,4vw,48px);line-height:1.08;letter-spacing:-.035em;margin-bottom:14px}
+    .lead{font-size:1.08rem;color:var(--muted)}
+
+    .about-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+    .about-note{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .about-note strong{display:block;color:var(--navy);font-size:1.05rem;margin-bottom:10px}
+    .about-note p{color:var(--muted)}
+    .about-text p + p{margin-top:18px;color:var(--muted)}
+
+    .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:#fff;box-shadow:0 8px 28px rgba(11,34,57,.045);transition:.2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(11,34,57,.08)}
+    .icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#edf5fb;color:var(--blue);margin-bottom:18px}
+    .icon svg{width:23px;height:23px}
+    .card h3{font-size:1.13rem;margin-bottom:9px}
+    .card p{color:var(--muted);font-size:.96rem}
+
+    .approach{background:var(--soft)}
+    .approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{padding:22px;border-top:2px solid #a9cce6}
+    .step span{font-size:.78rem;color:var(--blue);font-weight:800;letter-spacing:.12em}
+    .step h3{margin:9px 0 7px;font-size:1.05rem}
+    .step p{color:var(--muted);font-size:.92rem}
+
+    .collab{background:linear-gradient(180deg,#fff,#f7fafc)}
+    .collab-box{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center;border:1px solid var(--line);border-radius:24px;padding:38px;background:#fff;box-shadow:var(--shadow)}
+    .collab-box p{max-width:780px;color:var(--muted);font-size:1.05rem}
+
+    .contact{background:var(--navy);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:50px;align-items:start}
+    .contact .kicker{color:#9cc8eb}
+    .contact p{color:#c9dae8}
+    .contact-card{border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(255,255,255,.05);padding:28px}
+    .contact-line{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .contact-line:last-child{border-bottom:0}
+    .contact-label{min-width:120px;color:#99b4ca;font-size:.84rem}
+    .contact-value{color:#fff}
+    .contact a:hover{color:#9fd2f5}
+
+    footer{background:#061525;color:#9fb0c0;padding:26px 0 30px}
+    .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+    .legal{font-size:.85rem;line-height:1.7}
+    .footer-brand{color:#fff;font-weight:800;letter-spacing:.12em;margin-bottom:7px}
+    .footer-right{text-align:right;font-size:.83rem}
+
+    @media (max-width: 980px){
+      .hero-grid,.about-wrap,.contact-grid{grid-template-columns:1fr}
+      .hero-grid{padding-top:72px}
+      .hero-visual{min-height:360px}
+      .cap-grid{grid-template-columns:repeat(2,1fr)}
+      .approach-grid{grid-template-columns:repeat(2,1fr)}
+      .collab-box{grid-template-columns:1fr}
     }
-}
-</style>
+    @media (max-width: 680px){
+      .nav{height:68px}
+      nav{display:none}
+      .hero-grid{min-height:auto;padding:68px 0 62px}
+      section{padding:66px 0}
+      .cap-grid,.approach-grid{grid-template-columns:1fr}
+      .visual-card{max-width:390px}
+      .footer-top{flex-direction:column}
+      .footer-right{text-align:left}
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-    <div class="logo">SFOTIKX</div>
-    <nav>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="SFOTIKX home">
+        <div class="brand-mark"><img src="logo.png" alt="SFOTIKX logo"></div>
+        <span>SFOTIKX</span>
+      </a>
+      <nav>
         <a href="#about">About</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#collaboration">Collaboration</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<main>
-
-<section class="hero">
-    <div class="eyebrow">Pharmaceutical & Scientific R&D</div>
-
-    <h1>Science at the interface of molecules, materials and formulation.</h1>
-
-    <p>
-        SFOTIKX Ltd is a UK-based pharmaceutical and scientific R&D company
-        focused on solid-state science, crystallisation, formulation and
-        related scientific and technical development.
-    </p>
-
-    <a class="button" href="#contact">Get in touch</a>
-</section>
-
-
-<section id="about" class="section-light">
-    <h2>About SFOTIKX</h2>
-
-    <p class="intro">
-        We work across pharmaceutical science, materials science and research
-        and development, with a focus on understanding and developing
-        solutions to pharmaceutical challenges.
-    </p>
-
-    <p class="intro">
-        Our activities include scientific consultancy, collaborative R&D,
-        technology development and technical research in areas related to
-        pharmaceutical development.
-    </p>
-</section>
-
-
-<section id="capabilities">
-    <h2>Capabilities</h2>
-
-    <p class="intro">
-        Scientific and technical expertise spanning solid-state development,
-        crystallisation and pharmaceutical formulation research.
-    </p>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Solid-State & Crystal Engineering</h3>
-            <p>
-                Polymorph, salt and cocrystal development, crystal engineering,
-                solid-form assessment and physicochemical characterisation.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Crystallisation & Process Development</h3>
-            <p>
-                Crystallisation, precipitation, supersaturation, nucleation,
-                crystal growth and process optimisation.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Pharmaceutical Development</h3>
-            <p>
-                Preformulation, formulation research, pharmaceutical R&D and
-                assessment of physicochemical properties.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Scientific Consultancy</h3>
-            <p>
-                Scientific and technical consultancy, collaborative research
-                and technology-development activities.
-            </p>
-        </div>
-
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
     </div>
-</section>
+  </header>
 
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Pharmaceutical &amp; Scientific R&amp;D</div>
+          <h1>Collaborative R&amp;D for pharmaceutical and scientific innovation.</h1>
+          <p class="hero-copy">SFOTIKX Ltd is a UK-based pharmaceutical and scientific R&amp;D company providing outsourced research, technical consultancy and collaborative development across pharmaceutical science, formulation, materials science and related areas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#capabilities">Explore capabilities</a>
+            <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+          </div>
+        </div>
 
-<section id="collaboration" class="section-light">
-    <h2>Research & Collaboration</h2>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-card">
+            <div class="visual-label">Science · Materials · Development</div>
+            <svg class="molecule" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#a9d7f5" stop-opacity=".85"/>
+                  <stop offset="1" stop-color="#377fbd" stop-opacity=".15"/>
+                </linearGradient>
+              </defs>
+              <g stroke="#b8d8ee" stroke-opacity=".44" stroke-width="2">
+                <path d="M82 126 196 70 318 119 407 78 453 188 374 286 415 401 296 452 174 398 77 332 95 228Z" fill="none"/>
+                <path d="M196 70 174 196 318 119 374 286 174 398 174 196 296 452" fill="none"/>
+              </g>
+              <g fill="url(#g1)" stroke="#d3ebfa" stroke-width="2">
+                <circle cx="82" cy="126" r="14"/><circle cx="196" cy="70" r="18"/><circle cx="318" cy="119" r="15"/>
+                <circle cx="407" cy="78" r="11"/><circle cx="453" cy="188" r="18"/><circle cx="374" cy="286" r="16"/>
+                <circle cx="415" cy="401" r="12"/><circle cx="296" cy="452" r="20"/><circle cx="174" cy="398" r="14"/>
+                <circle cx="77" cy="332" r="12"/><circle cx="95" cy="228" r="15"/><circle cx="174" cy="196" r="20"/>
+              </g>
+              <circle cx="278" cy="248" r="62" fill="#fff" fill-opacity=".09" stroke="#d7efff" stroke-opacity=".48"/>
+              <circle cx="278" cy="248" r="31" fill="#f7fbff" fill-opacity=".92"/>
+              <path d="M258 264 299 224" stroke="#0b2239" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+              <rect x="247" y="322" width="62" height="108" rx="31" fill="#fff" fill-opacity=".12" stroke="#d7efff" stroke-opacity=".55"/>
+              <path d="M247 376h62" stroke="#d7efff" stroke-opacity=".35" stroke-width="2"/>
+              <path d="M278 339v74" stroke="#d7efff" stroke-opacity=".22" stroke-width="2"/>
+              <circle cx="278" cy="292" r="4" fill="#fff" opacity=".9"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p class="intro">
-        SFOTIKX is open to scientific and R&D collaborations with pharmaceutical,
-        biotechnology and other organisations seeking expertise in solid-state
-        science, crystallisation, formulation and related research.
-    </p>
-</section>
+    <section id="about">
+      <div class="container about-wrap">
+        <div class="about-note">
+          <strong>Independent scientific partner</strong>
+          <p>SFOTIKX supports organisations looking for focused scientific expertise, flexible R&amp;D support and collaborative development.</p>
+        </div>
+        <div class="about-text">
+          <div class="kicker">About SFOTIKX</div>
+          <h2>Building practical R&amp;D partnerships across the life sciences.</h2>
+          <p>SFOTIKX Ltd is a UK-based pharmaceutical and scientific R&amp;D company supporting research, development and innovation across the life sciences. We bring scientific expertise and a collaborative approach to a range of pharmaceutical and technical challenges, from early-stage research and development through to technology-focused projects.</p>
+          <p>Our work spans pharmaceutical science, formulation, materials science, analytical development and related areas. We undertake collaborative R&amp;D, outsourced research, scientific and technical consultancy, and technology development in partnership with pharmaceutical, biotechnology and research organisations.</p>
+        </div>
+      </div>
+    </section>
 
+    <section id="capabilities" class="approach">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Capabilities</div>
+          <h2>Scientific expertise that can flex around the problem.</h2>
+          <p class="lead">Our capabilities span pharmaceutical science, formulation, materials science, analytical development and related R&amp;D, allowing us to support projects from scientific investigation through to technology-focused development.</p>
+        </div>
 
-<section id="contact">
-    <div class="contact">
-        <h2>Let's talk</h2>
+        <div class="cap-grid">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18h16M6 15V9m4 6V5m4 10V8m4 7v-4"/><path d="M4 19h16"/></svg></div>
+            <h3>Pharmaceutical Research &amp; Development</h3>
+            <p>Scientific support across pharmaceutical development, from early-stage research and problem definition through to experimental development and technical evaluation.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3h8M9 3v5l-4 7a4 4 0 0 0 3.5 6h7a4 4 0 0 0 3.5-6l-4-7V3"/><path d="M7 15h10"/></svg></div>
+            <h3>Formulation &amp; Preformulation</h3>
+            <p>Preformulation studies, formulation development, physicochemical assessment and investigation of factors influencing pharmaceutical performance and stability.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 20 8v8l-8 5-8-5V8l8-5Z"/><path d="m4 8 8 5 8-5M12 13v8"/></svg></div>
+            <h3>Solid-State &amp; Materials Science</h3>
+            <p>Polymorph, salt and cocrystal development, crystal engineering, solid-form assessment, phase behaviour and materials-related research.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="6" r="2"/><path d="m7.8 16.8 2.7-9M16.2 16.8l-2.7-9M8 18h8"/></svg></div>
+            <h3>Crystallisation &amp; Particle Engineering</h3>
+            <p>Crystallisation and precipitation studies, supersaturation, nucleation and crystal growth, particle-property evaluation and process optimisation.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18h16M6 16V8h12v8M8 8V5h8v3M9 12h6"/></svg></div>
+            <h3>Analytical &amp; Characterisation</h3>
+            <p>Application of complementary analytical and characterisation approaches to understand materials, formulations and pharmaceutical systems and support R&amp;D decisions.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="18" cy="18" r="2.5"/></svg></div>
+            <h3>Scientific Consultancy &amp; Collaborative R&amp;D</h3>
+            <p>Outsourced research, technical consultancy and collaborative R&amp;D for pharmaceutical, biotechnology and research organisations, including technology-development projects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <p class="intro">
-            For scientific consultancy, R&D collaboration or technology-development
-            enquiries, please contact:
-        </p>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Our approach</div>
+          <h2>From scientific question to development strategy.</h2>
+          <p class="lead">We combine focused scientific investigation with a practical, collaborative approach to help partners move R&amp;D projects forward.</p>
+        </div>
+        <div class="approach-grid">
+          <div class="step"><span>01</span><h3>Understand</h3><p>Define the scientific question, development need and available evidence.</p></div>
+          <div class="step"><span>02</span><h3>Investigate</h3><p>Design and execute focused experimental or analytical work.</p></div>
+          <div class="step"><span>03</span><h3>Develop</h3><p>Translate findings into practical development options and next steps.</p></div>
+          <div class="step"><span>04</span><h3>Collaborate</h3><p>Work alongside internal teams, academic groups or technology partners.</p></div>
+        </div>
+      </div>
+    </section>
 
-        <p style="font-size:22px;">
-            <a href="mailto:sfotikx@gmail.com">sfotikx@gmail.com</a>
-        </p>
+    <section id="collaboration" class="collab">
+      <div class="container">
+        <div class="collab-box">
+          <div>
+            <div class="kicker">Research &amp; Collaboration</div>
+            <h2>Built to collaborate, not just consult.</h2>
+            <p>SFOTIKX works with pharmaceutical, biotechnology and research organisations through collaborative R&amp;D, outsourced research and scientific consultancy. We engage with partners to address scientific and technical challenges, explore new development opportunities and advance research towards practical applications.</p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Discuss a project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2>Let's start a scientific conversation.</h2>
+          <p>For scientific consultancy, R&amp;D collaboration or technology-development enquiries, please get in touch.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:sfotikx@gmail.com">Email SFOTIKX</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-line"><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:sfotikx@gmail.com">sfotikx@gmail.com</a></div></div>
+          <div class="contact-line"><div class="contact-label">Company</div><div class="contact-value">SFOTIKX LTD</div></div>
+          <div class="contact-line"><div class="contact-label">Company No.</div><div class="contact-value">17489122</div></div>
+          <div class="contact-line"><div class="contact-label">Registered in</div><div class="contact-value">England and Wales</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-top">
+      <div class="legal">
+        <div class="footer-brand">SFOTIKX LTD</div>
+        <div>Registered in England and Wales</div>
+        <div>Company No. 17489122</div>
+        <div>Registered Office: 66 Paul Street, London, England, EC2A 4NA</div>
+      </div>
+      <div class="footer-right">© 2026 SFOTIKX Ltd. All rights reserved.</div>
     </div>
-</section>
-
-</main>
-
-<footer>
-    © 2026 SFOTIKX Ltd · United Kingdom
-</footer>
-
+  </footer>
 </body>
 </html>
